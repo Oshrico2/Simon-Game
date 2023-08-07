@@ -7,12 +7,22 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+function startGame() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
+}
+
+// For desktop devices, use keypress event
+$(document).keypress(function(event) {
+  startGame();
+});
+
+// For mobile devices, use touchstart event
+$(document).on("touchstart", function(event) {
+  startGame();
 });
 
 $(".btn").click(function() {
