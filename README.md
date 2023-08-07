@@ -1,3 +1,3 @@
-# Simon-Game
+# Simon Game
 
-Implementation of the familiar and old game using
+# Implementation of the familiar and old game using
